@@ -9,7 +9,7 @@ public class ClothesShopUtils {
     //Napisz metode, która stwierdzi czy w sklepie jest ubranie marki Puma
     public boolean checkBrand(ClothesShop clothesShop){
         boolean result = false;
-        if(clothesShop.getCloth().getBrand().equals("Puma")){
+        if(clothesShop.getClient().getCloth().getBrand().equals("Puma")){
             result = true;
         }
         return result;
@@ -20,7 +20,7 @@ public class ClothesShopUtils {
 
     public boolean isCheaperThan220(ClothesShop clothesShop){
         boolean result = false;
-        if(clothesShop.getCloth().getPrice() < 220){
+        if(clothesShop.getClient().getCloth().getPrice() < 220){
             result = true;
         }
         return result;
@@ -54,7 +54,7 @@ public class ClothesShopUtils {
     public boolean checkBrandAndSize(ClothesShop clothesShop){
         boolean result = false;
         if(checkBrand(clothesShop)){
-            if(clothesShop.getCloth().getSize().equals("S")){
+            if(clothesShop.getClient().getCloth().getSize().equals("S")){
                 result = true;
             }
         }

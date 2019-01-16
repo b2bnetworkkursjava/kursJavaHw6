@@ -1,5 +1,6 @@
 package com.b2b.net.hw6;
 
+import com.b2b.net.hw6.domains.Client;
 import com.b2b.net.hw6.domains.Cloth;
 import com.b2b.net.hw6.domains.ClothesShop;
 import com.b2b.net.hw6.utils.ClothesShopUtils;
@@ -8,8 +9,12 @@ import org.junit.Test;
 
 public class ClothesShopTest {
     private Cloth cloth = new Cloth("Bluza", 199.99, "S", "Puma");
+    private Client client = new Client("Bartosz","Nowak",27,"123456789","Złota",
+            "Warszawa","05-022",cloth);
     private ClothesShop clothesShop = new ClothesShop("ClothesShop", "123456789", "Anielewicza",
-            "00-012", "Warszawa",cloth);
+            "00-012", "Warszawa",client);
+
+
     private ClothesShopUtils clothesShopUtils = new ClothesShopUtils();
 
 

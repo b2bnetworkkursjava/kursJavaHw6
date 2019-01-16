@@ -7,15 +7,15 @@ public class ClothesShop {
     private String street;
     private String postal_code;
     private String city;
-    private Cloth cloth;
+    private Client client;
 
-    public ClothesShop(String name, String phone, String street, String postal_code, String city, Cloth cloth) {
+    public ClothesShop(String name, String phone, String street, String postal_code, String city, Client client) {
         this.name = name;
         this.phone = phone;
         this.street = street;
         this.postal_code = postal_code;
         this.city = city;
-        this.cloth = cloth;
+        this.client = client;
     }
 
     public String getName() {
@@ -58,11 +58,11 @@ public class ClothesShop {
         this.city = city;
     }
 
-    public Cloth getCloth() {
-        return cloth;
+    public Client getClient() {
+        return client;
     }
 
-    public void setCloth(Cloth cloth) {
-        this.cloth = cloth;
+    public void setClient(Client client) {
+        this.client = client;
     }
 }
