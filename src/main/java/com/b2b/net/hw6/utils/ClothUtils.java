@@ -31,7 +31,7 @@ public class ClothUtils {
     }
 
 
-    //5.Napisz program, który stwierdzi ubranie jest marki Puma i kosztuje mniej niz 200 zl, skorzystaj z equals
+    //5.Napisz program, który stwierdzi ubranie jest marki Adidas i kosztuje mniej niz 200 zl, skorzystaj z equals
     public boolean checkBrandAndPrice(Cloth cloth){
         return true;
     }

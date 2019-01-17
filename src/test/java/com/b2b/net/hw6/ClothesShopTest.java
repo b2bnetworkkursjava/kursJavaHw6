@@ -8,14 +8,14 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class ClothesShopTest {
-    private Cloth cloth = new Cloth("Bluza", 199.99, "S", "Puma");
-    private Client client = new Client("Bartosz","Nowak",27,"123456789","Złota",
-            "Warszawa","05-022",cloth);
-    private ClothesShop clothesShop = new ClothesShop("ClothesShop", "123456789", "Anielewicza",
-            "00-012", "Warszawa",client);
 
-
-    private ClothesShopUtils clothesShopUtils = new ClothesShopUtils();
+    /**
+     * ZAINICJUJ OBIEKTY WYKORZYSTUJAC KONSTRUKTORY UTWORZONE W KLASACH. PAMIETAJ O POPRAWNOSCI DANYCH INACZEJ TESTY NIE PRZEJDA.
+     */
+    private Cloth cloth;
+    private Client client;
+    private ClothesShop clothesShop;
+    private ClothesShopUtils clothesShopUtils;
 
 
     @Test

@@ -11,10 +11,12 @@ import org.junit.Test;
  */
 public class ClientTest
 {
-    private Cloth cloth = new Cloth("Spodnie",23.50,"S","Puma");
-    private Client client = new Client("Ania","Nowacka",32,"123456789","Grochowska",
-            "Warszawa","05-022",cloth);
-    private ClientUtils clientUtils = new ClientUtils();
+    /**
+     * ZAINICJUJ OBIEKTY WYKORZYSTUJAC KONSTRUKTORY UTWORZONE W KLASACH. PAMIETAJ O POPRAWNOSCI DANYCH INACZEJ TESTY NIE PRZEJDA.
+     */
+    private Cloth cloth;
+    private Client client;
+    private ClientUtils clientUtils;
     /**
      * Rigorous Test :-)
      */

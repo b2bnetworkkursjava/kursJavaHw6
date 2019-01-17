@@ -6,8 +6,12 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class ClothTest {
-    private Cloth cloth = new Cloth("T-shirt",87.99,"L","Adidas");
-    private ClothUtils clothUtils = new ClothUtils();
+
+    /**
+     * ZAINICJUJ OBIEKTY WYKORZYSTUJAC KONSTRUKTORY UTWORZONE W KLASACH. PAMIETAJ O POPRAWNOSCI DANYCH INACZEJ TESTY NIE PRZEJDA.
+     */
+    private Cloth cloth;
+    private ClothUtils clothUtils;
 
 
     @Test
