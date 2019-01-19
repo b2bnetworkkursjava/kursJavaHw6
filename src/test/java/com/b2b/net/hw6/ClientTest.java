@@ -14,12 +14,14 @@ public class ClientTest
     /**
      * ZAINICJUJ OBIEKTY WYKORZYSTUJAC KONSTRUKTORY UTWORZONE W KLASACH. PAMIETAJ O POPRAWNOSCI DANYCH INACZEJ TESTY NIE PRZEJDA.
      */
-    private Cloth cloth;
-    private Client client;
-    private ClientUtils clientUtils;
+    private Cloth cloth = new Cloth("dres", 90,"s","Puma");
+    private Client client = new Client("Aneta", "Pasik", 19, "Nokia",
+            "Aleje Jerozolimskie", "Warsaw", "12345", cloth);
+    private ClientUtils clientUtils = new ClientUtils();
     /**
      * Rigorous Test :-)
      */
+
     @Test
     public void checkIsClientAdult()
     {
