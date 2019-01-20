@@ -3,37 +3,58 @@ package com.b2b.net.hw6.utils;
 import com.b2b.net.hw6.domains.Cloth;
 
 public class ClothUtils {
+    // Cloth cloth = new Cloth();
+    // private Cloth cloth;
 
     //1. Napisz program, który stwierdzi czy cena ubrania się w przedziale cenowym(0,100)zł
 
     public boolean isPriceInTheRange(Cloth cloth){
-        return true;
+        boolean result;
+        if (cloth.getPrice()>0 && cloth.getPrice()<100) {
+            result = true;
+        } else {
+            result = false;
+        }
+        return result;
     }
 
 
     //2.Napisz program, stwierdzi czy ubranie jest marki Nike, skorzystaj z equals
 
     public boolean isBrandEqualNike(Cloth cloth){
-        return true;
-    }
+       /* boolean result;
+        if (cloth.getBrand().equals("Nike")) {
+            result = true;
+        } else {
+            result = false;
+        }
+        return result;
+        */
+       String brand="Nike";
+       return brand.equals(cloth.getBrand());    }
 
 
-
-    //3.Napisz program, który stwierdzi czy ubranie posiada rozmiar S lub rozmiar M, skorzystaj z equals
+//3.Napisz program, który stwierdzi czy ubranie posiada rozmiar S lub rozmiar M, skorzystaj z equals
 
     public boolean checkSize(Cloth cloth){
-        return true;
+
+        if ((cloth.getSize().equals("S") || cloth.getSize().equals("M") )) return true;
+        else return false;
     }
 
     //4.Napisz program, który stwierdzi czy ubranie jest marki Adidas lub marki Nike, skorzystaj z equals
     public boolean checkBrand(Cloth cloth){
-        return true;
+
+        if ((cloth.getBrand().equals("Nike") || cloth.getBrand().equals("Adidas") )) return true;
+        else return false;
     }
 
 
     //5.Napisz program, który stwierdzi ubranie jest marki Adidas i kosztuje mniej niz 200 zl, skorzystaj z equals
     public boolean checkBrandAndPrice(Cloth cloth){
-        return true;
+        if ((cloth.getBrand().equals("Adidas") && cloth.getPrice()<200 )) return true;
+        else return false;
+
     }
 
 
