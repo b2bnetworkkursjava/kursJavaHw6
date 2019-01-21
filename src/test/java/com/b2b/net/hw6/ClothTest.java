@@ -10,8 +10,8 @@ public class ClothTest {
     /**
      * ZAINICJUJ OBIEKTY WYKORZYSTUJAC KONSTRUKTORY UTWORZONE W KLASACH. PAMIETAJ O POPRAWNOSCI DANYCH INACZEJ TESTY NIE PRZEJDA.
      */
-    private Cloth cloth;
-    private ClothUtils clothUtils;
+    private Cloth cloth = new Cloth("buty",99.99,"L","Adidas");
+    private ClothUtils clothUtils= new ClothUtils();
 
 
     @Test
@@ -37,8 +37,8 @@ public class ClothTest {
     @Test
     public void checkBrandEqualNikeOrAdidas()
     {
-        boolean b = clothUtils.checkSize(cloth);
-        Assert.assertFalse(b);
+        boolean b = clothUtils.checkBrand(cloth);
+        Assert.assertTrue(b);
     }
 
     @Test

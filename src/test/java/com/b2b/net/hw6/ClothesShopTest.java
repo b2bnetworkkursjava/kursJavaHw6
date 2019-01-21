@@ -12,43 +12,38 @@ public class ClothesShopTest {
     /**
      * ZAINICJUJ OBIEKTY WYKORZYSTUJAC KONSTRUKTORY UTWORZONE W KLASACH. PAMIETAJ O POPRAWNOSCI DANYCH INACZEJ TESTY NIE PRZEJDA.
      */
-    private Cloth cloth;
-    private Client client;
-    private ClothesShop clothesShop;
-    private ClothesShopUtils clothesShopUtils;
+    private Cloth cloth = new Cloth("drese", 190.99, "S", "Puma");
+    private Client client = new Client("Jan", "Kowalski", 69, "9898765", "Krucza", "Kraków", "09-997", cloth);
+    private ClothesShop clothesShop = new ClothesShop("Sklep", "382828282", "Miłą", "83-938", "Wrocław", client);
+    private ClothesShopUtils clothesShopUtils = new ClothesShopUtils();
 
 
     @Test
-    public void checkBrandEqualPuma()
-    {
+    public void checkBrandEqualPuma() {
         boolean b = clothesShopUtils.checkBrand(clothesShop);
         Assert.assertTrue(b);
     }
 
     @Test
-    public void checkClothIsCheaperThan220()
-    {
+    public void checkClothIsCheaperThan220() {
         boolean b = clothesShopUtils.isCheaperThan220(clothesShop);
         Assert.assertTrue(b);
     }
 
     @Test
-    public void checkShopIsFromCracow()
-    {
+    public void checkShopIsFromCracow() {
         boolean b = clothesShopUtils.isFromCracow(clothesShop);
         Assert.assertFalse(b);
     }
 
     @Test
-    public void checkShopCityAndStreet()
-    {
+    public void checkShopCityAndStreet() {
         boolean b = clothesShopUtils.checkCityAndStreet(clothesShop);
         Assert.assertFalse(b);
     }
 
     @Test
-    public void checkBrandAndSizeClothInShop()
-    {
+    public void checkBrandAndSizeClothInShop() {
         boolean b = clothesShopUtils.checkBrandAndSize(clothesShop);
         Assert.assertTrue(b);
     }

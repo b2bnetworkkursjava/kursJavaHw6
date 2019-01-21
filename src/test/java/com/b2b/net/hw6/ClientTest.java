@@ -9,51 +9,49 @@ import org.junit.Test;
 /**
  * Unit test for simple Client.
  */
-public class ClientTest
-{
+public class ClientTest {
     /**
      * ZAINICJUJ OBIEKTY WYKORZYSTUJAC KONSTRUKTORY UTWORZONE W KLASACH. PAMIETAJ O POPRAWNOSCI DANYCH INACZEJ TESTY NIE PRZEJDA.
      */
-    private Cloth cloth;
-    private Client client;
-    private ClientUtils clientUtils;
+    private Cloth cloth = new Cloth("spodnie", 99.99, "S", "Nike");
+    private Client client = new Client("Janina", "Kowalska", 20, "509098098", "Grochowska", "Warszawa", "90-098", cloth);
+    private ClientUtils clientUtils = new ClientUtils();
+
     /**
      * Rigorous Test :-)
      */
     @Test
-    public void checkIsClientAdult()
-    {
+    public void checkIsClientAdult() {
         boolean b = clientUtils.isClientAdult(client);
         Assert.assertTrue(b);
     }
+
     @Test
-    public void checkIsClientFromWarsaw()
-    {
+    public void checkIsClientFromWarsaw() {
         boolean b = clientUtils.isClientFromWarsaw(client);
         Assert.assertTrue(b);
     }
+
     @Test
-    public void checkClientNameEqualAdam()
-    {
+    public void checkClientNameEqualAdam() {
         boolean b = clientUtils.equals(client);
         Assert.assertFalse(b);
     }
+
     @Test
-    public void checkClientSex()
-    {
-        Assert.assertEquals("woman",clientUtils.checkSex(client));
+    public void checkClientSex() {
+        Assert.assertEquals("woman", clientUtils.checkSex(client));
 
     }
+
     @Test
-    public void checkClothIsCheaperThan100()
-    {
+    public void checkClothIsCheaperThan100() {
         boolean b = clientUtils.isCheaperThan100(client);
         Assert.assertTrue(b);
     }
 
     @Test
-    public void checkSizeEqualS()
-    {
+    public void checkSizeEqualS() {
         boolean b = clientUtils.isSizeEqualS(client);
         Assert.assertTrue(b);
     }
