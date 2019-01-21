@@ -12,10 +12,10 @@ public class ClothesShopTest {
     /**
      * ZAINICJUJ OBIEKTY WYKORZYSTUJAC KONSTRUKTORY UTWORZONE W KLASACH. PAMIETAJ O POPRAWNOSCI DANYCH INACZEJ TESTY NIE PRZEJDA.
      */
-    private Cloth cloth;
-    private Client client;
-    private ClothesShop clothesShop;
-    private ClothesShopUtils clothesShopUtils;
+    private Cloth cloth = new Cloth("Majtki", 20, "S","Puma");
+    private Client client = new Client("Alicja","Kowalska", 19, "555","Okopowa","Warszawa","00-121", cloth );
+    private ClothesShop clothesShop = new ClothesShop("Sklep","666", "Ulica", "01-213","Warszawa", client );
+    private ClothesShopUtils clothesShopUtils= new ClothesShopUtils();
 
 
     @Test

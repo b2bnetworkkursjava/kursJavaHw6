@@ -14,9 +14,9 @@ public class ClientTest
     /**
      * ZAINICJUJ OBIEKTY WYKORZYSTUJAC KONSTRUKTORY UTWORZONE W KLASACH. PAMIETAJ O POPRAWNOSCI DANYCH INACZEJ TESTY NIE PRZEJDA.
      */
-    private Cloth cloth;
-    private Client client;
-    private ClientUtils clientUtils;
+    private Cloth cloth = new Cloth("Majtki", 20, "S","Nike");
+    private Client client = new Client("Alicja","Kowalska", 19, "555","Okopowa","Warszawa","00-121", cloth );
+    private ClientUtils clientUtils = new ClientUtils();
     /**
      * Rigorous Test :-)
      */
@@ -35,7 +35,7 @@ public class ClientTest
     @Test
     public void checkClientNameEqualAdam()
     {
-        boolean b = clientUtils.equals(client);
+        boolean b = clientUtils.isClientNameEqualAdam(client);
         Assert.assertFalse(b);
     }
     @Test
