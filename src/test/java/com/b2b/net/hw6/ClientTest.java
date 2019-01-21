@@ -17,6 +17,9 @@ public class ClientTest
     private Cloth cloth;
     private Client client;
     private ClientUtils clientUtils;
+    private Cloth cloth = new Cloth("Bluza", 50, "S", "puma");
+    private Client client = new Client("Jan","Kowalski",25,"556889098", "Warsaw", "02-001", cloth);
+    private ClientUtils clientUtils = new ClientUtils();
     /**
      * Rigorous Test :-)
      */

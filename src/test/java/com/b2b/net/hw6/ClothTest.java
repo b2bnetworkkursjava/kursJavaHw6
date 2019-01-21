@@ -12,7 +12,8 @@ public class ClothTest {
      */
     private Cloth cloth;
     private ClothUtils clothUtils;
-
+    private Cloth cloth = new Cloth("Bluza",  50,"S", "Puma");
+    private  ClothUtils clothUtils = new ClothUtils();
 
     @Test
     public void checkPriceIsInTheRange()

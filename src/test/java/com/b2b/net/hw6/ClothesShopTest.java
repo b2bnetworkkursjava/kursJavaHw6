@@ -16,6 +16,9 @@ public class ClothesShopTest {
     private Client client;
     private ClothesShop clothesShop;
     private ClothesShopUtils clothesShopUtils;
+    private Cloth cloth = new Cloth("Bluza",50, "S","Puma");
+    private ClothesShop clothesShop = new ClothesShop("Sklep","598679098", "Marszałkowska", "02-001", client);
+    private ClothesShopUtils clothesShopUtils = new ClothesShopUtils();
 
 
     @Test
