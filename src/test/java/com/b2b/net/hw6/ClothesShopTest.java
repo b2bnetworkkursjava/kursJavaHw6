@@ -10,12 +10,12 @@ import org.junit.Test;
 public class ClothesShopTest {
 
     /**
-     * ZAINICJUJ OBIEKTY WYKORZYSTUJAC KONSTRUKTORY UTWORZONE W KLASACH. PAMIETAJ O POPRAWNOSCI DANYCH INACZEJ TESTY NIE PRZEJDA.
+     * ZAINICJUJ OBIEKTY WYKORZYST'UJAC KONSTRUKTORY UTWORZONE W KLASACH. PAMIETAJ O POPRAWNOSCI DANYCH INACZEJ TESTY NIE PRZEJDA.
      */
-    private Cloth cloth;
-    private Client client;
-    private ClothesShop clothesShop;
-    private ClothesShopUtils clothesShopUtils;
+    private Cloth cloth=new Cloth("Steven",154,"S","Puma");
+    private Client client=new Client("Ada","Kowalska",37,"798978898","Mokotowska","Warsaw","12-477",cloth);
+    private ClothesShop clothesShop=new ClothesShop("Krzysztof","7898789845","Grochowska","78-325","Mielec",client);
+    private ClothesShopUtils clothesShopUtils=new ClothesShopUtils();
 
 
     @Test

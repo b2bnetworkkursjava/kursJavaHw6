@@ -13,4 +13,48 @@ public class ClothesShop {
     private Client client;
 
 
+    public ClothesShop(String name, String phone, String street, String postal_code, String city, Client client) {
+        this.name = name;
+        this.phone = phone;
+        this.street = street;
+        this.postal_code = postal_code;
+        this.city = city;
+        this.client = client;
+    }
+    public String getName(){
+        return name;
+    }
+    public void setName(String name){
+        this.name=name;
+    }
+    public String getPhone(){
+        return phone;
+    }
+    public void setPhone(String phone){
+        this.phone=phone;
+    }
+    public String getStreet(){
+        return street;
+    }
+    public void setStreet(String street){
+        this.street=street;
+    }
+    public String getPostal_code(){
+        return postal_code;
+    }
+    public  void setPostal_code(String postal_code){
+        this.postal_code=postal_code;
+    }
+    public String getCity(){
+        return city;
+    }
+    public  void setCity(String city){
+        this.city=city;
+    }
+    public Client getClient(){
+        return client;
+    }
+    public void setClient(Client client){
+        this.client=client;
+    }
 }

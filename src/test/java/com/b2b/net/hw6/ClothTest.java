@@ -1,5 +1,6 @@
 package com.b2b.net.hw6;
 
+import com.b2b.net.hw6.domains.Client;
 import com.b2b.net.hw6.domains.Cloth;
 import com.b2b.net.hw6.utils.ClothUtils;
 import org.junit.Assert;
@@ -10,8 +11,9 @@ public class ClothTest {
     /**
      * ZAINICJUJ OBIEKTY WYKORZYSTUJAC KONSTRUKTORY UTWORZONE W KLASACH. PAMIETAJ O POPRAWNOSCI DANYCH INACZEJ TESTY NIE PRZEJDA.
      */
-    private Cloth cloth;
-    private ClothUtils clothUtils;
+    private Cloth cloth=new Cloth("Jack",89,"Medium","Adidas");
+    private ClothUtils clothUtils=new ClothUtils();
+
 
 
     @Test
