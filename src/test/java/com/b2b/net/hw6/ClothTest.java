@@ -10,44 +10,45 @@ public class ClothTest {
     /**
      * ZAINICJUJ OBIEKTY WYKORZYSTUJAC KONSTRUKTORY UTWORZONE W KLASACH. PAMIETAJ O POPRAWNOSCI DANYCH INACZEJ TESTY NIE PRZEJDA.
      */
-    private Cloth cloth;
-    private ClothUtils clothUtils;
+    private Cloth cloth = new Cloth("Spodnie", 80, "XL", "Adidas");
+    private ClothUtils clothUtils = new ClothUtils();
 
 
     @Test
-    public void checkPriceIsInTheRange()
-    {
+    public void checkPriceIsInTheRange() {
         boolean b = clothUtils.isPriceInTheRange(cloth);
         Assert.assertTrue(b);
     }
 
     @Test
-    public void checkBrandEqualNike()
-    {
+    public void checkBrandEqualNike() {
         boolean b = clothUtils.isBrandEqualNike(cloth);
         Assert.assertFalse(b);
     }
 
     @Test
-    public void checkSizeEqualSmallOrMedium()
-    {
-        boolean b = clothUtils.checkSize(cloth);
-        Assert.assertFalse(b);
-    }
-    @Test
-    public void checkBrandEqualNikeOrAdidas()
-    {
+    public void checkSizeEqualSmallOrMedium() {
         boolean b = clothUtils.checkSize(cloth);
         Assert.assertFalse(b);
     }
 
     @Test
-    public void checkBrandAndPriceCloth()
-    {
-        boolean b = clothUtils.checkBrandAndPrice(cloth);
+    public void checkBrandEqualNikeOrAdidas() {
+        boolean b = clothUtils.checkSize(cloth); //checkSize dla sprawdzenia marki? niżej poprawiona wersja
+        Assert.assertFalse(b);
+    }
+
+    @Test
+    public void checkBrandEqualNikeOrAdidas1() {
+        boolean b = clothUtils.checkBrand(cloth);
         Assert.assertTrue(b);
     }
 
+    @Test
+    public void checkBrandAndPriceCloth() {
+        boolean b = clothUtils.checkBrandAndPrice(cloth);
+        Assert.assertTrue(b);
+    }
 
 
 }
