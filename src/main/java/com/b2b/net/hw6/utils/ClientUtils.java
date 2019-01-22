@@ -8,40 +8,71 @@ public class ClientUtils {
     //Napisz metode, ktora stwierdzi czy klient jest pelnoletni
 
     public boolean isClientAdult(Client client) {
-        return true;
+        if (client.getAge() < 18) {
+            return false;
+        } else {
+            return true;
+        }
     }
+
+
     //2
     //Napisz metode, ktora stwierdzi czy klient pochodzi z Warszawy, skorzystaj z equals
 
     public boolean isClientFromWarsaw(Client client) {
-        return true;
+        if (client.getCity().equals("Warsaw"))
+            return true;
+        else {
+            return false;
+        }
     }
     //3
     //Napisz metode, która stwierdzi czy klient ma na imie Adam, skorzystaj z equals
 
     public boolean isClientNameEqualAdam(Client client) {
-        return true;
+        if (client.getName().equals("Adam"))
+            return true;
+        else {
+            return false;
+        }
     }
+
+
     //4
     //Napisz metode, ktora stwierdzi czy klient jest kobieta czy mezczyzna, (stwierdzamy to na podstawie tego, czy imie konczy sie litera 'a'
     //skorzystaj ze zmiennej pomocniczej typu char
     //i metod length() i charAt
 
     public String checkSex(Client client) {
-        return "";
+        char lastchar = client.getName().charAt(client.getName().length() - 1);
+        String sex;
+        if (lastchar == 'a') {
+            sex = "woman";
+        } else {
+            sex = "man";
+        }
+        return sex;
     }
     //6
     //Napisz metode, która stwierdzi czy zakupione przez klienta ubranie jest tańsze niz 100zł
 
     public boolean isCheaperThan100(Client client) {
-        return true;
+        if (client.getCloth().getPrice() < 100) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     //7
     //Napisz metode, która stwierdzi czy zakupiony przez klienta produkt jest rozmiaru S
 
     public boolean isSizeEqualS(Client client) {
-        return true;
+        if (client.getCloth().getSize() == "S") {
+            return true;
+        } else {
+            return false;
+        }
     }
-
 }

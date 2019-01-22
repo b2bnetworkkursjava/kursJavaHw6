@@ -10,8 +10,8 @@ public class ClothTest {
     /**
      * ZAINICJUJ OBIEKTY WYKORZYSTUJAC KONSTRUKTORY UTWORZONE W KLASACH. PAMIETAJ O POPRAWNOSCI DANYCH INACZEJ TESTY NIE PRZEJDA.
      */
-    private Cloth cloth;
-    private ClothUtils clothUtils;
+    private Cloth cloth = new Cloth("T-shirt", 90.00, "S", "Puma");
+    private ClothUtils clothUtils = new ClothUtils();
 
 
     @Test
