@@ -14,9 +14,9 @@ public class ClientTest
     /**
      * ZAINICJUJ OBIEKTY WYKORZYSTUJAC KONSTRUKTORY UTWORZONE W KLASACH. PAMIETAJ O POPRAWNOSCI DANYCH INACZEJ TESTY NIE PRZEJDA.
      */
-    private Cloth cloth;
-    private Client client;
-    private ClientUtils clientUtils;
+    private Cloth cloth = new Cloth("Stringi", 99.0, "S", "Puma");
+    private Client client = new Client("Janka", "Kowalska", 54, "603444555", "Wiatraczna", "Warsaw", "04-358", cloth);
+    private ClientUtils clientUtils = new ClientUtils();
     /**
      * Rigorous Test :-)
      */
