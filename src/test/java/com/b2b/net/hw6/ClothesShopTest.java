@@ -12,11 +12,15 @@ public class ClothesShopTest {
     /**
      * ZAINICJUJ OBIEKTY WYKORZYSTUJAC KONSTRUKTORY UTWORZONE W KLASACH. PAMIETAJ O POPRAWNOSCI DANYCH INACZEJ TESTY NIE PRZEJDA.
      */
-    private Cloth cloth;
-    private Client client;
-    private ClothesShop clothesShop;
-    private ClothesShopUtils clothesShopUtils;
+   // private Cloth cloth;
+    //private Client client;
+    //private ClothesShop clothesShop;
+    //private ClothesShopUtils clothesShopUtils;
 
+        Cloth cloth = new Cloth("Bluza",200.0,"S","Puma");
+    Client client1 = new Client("Marysia", "Kowalska", 18, "325435134", "fasfsd", "Warszawa", "00-713",cloth);
+    ClothesShop clothesShop = new ClothesShop("sklep","775544332", "Maarszałkowska", "00-000", "Warszawa",client1);
+    ClothesShopUtils clothesShopUtils = new ClothesShopUtils();
 
     @Test
     public void checkBrandEqualPuma()

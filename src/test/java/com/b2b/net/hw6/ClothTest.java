@@ -10,9 +10,11 @@ public class ClothTest {
     /**
      * ZAINICJUJ OBIEKTY WYKORZYSTUJAC KONSTRUKTORY UTWORZONE W KLASACH. PAMIETAJ O POPRAWNOSCI DANYCH INACZEJ TESTY NIE PRZEJDA.
      */
-    private Cloth cloth;
-    private ClothUtils clothUtils;
-
+    //private Cloth cloth;
+   // private ClothUtils clothUtils;
+    Cloth cloth = new Cloth("Bluza", 50.0, "L","Puma");
+    Cloth cloth1 = new Cloth("Koszulka", 20.0, "S", "Adidas");
+    ClothUtils clothUtils = new ClothUtils();
 
     @Test
     public void checkPriceIsInTheRange()
@@ -44,7 +46,7 @@ public class ClothTest {
     @Test
     public void checkBrandAndPriceCloth()
     {
-        boolean b = clothUtils.checkBrandAndPrice(cloth);
+        boolean b = clothUtils.checkBrandAndPrice(cloth1);
         Assert.assertTrue(b);
     }
 

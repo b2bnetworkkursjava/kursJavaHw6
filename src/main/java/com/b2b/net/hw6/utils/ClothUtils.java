@@ -7,14 +7,16 @@ public class ClothUtils {
     //1. Napisz program, który stwierdzi czy cena ubrania się w przedziale cenowym(0,100)zł
 
     public boolean isPriceInTheRange(Cloth cloth){
-        return true;
+        boolean cenaWPrzedziale = cloth.getPrice()>0.0&&cloth.getPrice()<100.0?true:false;
+        return cenaWPrzedziale;
     }
 
 
     //2.Napisz program, stwierdzi czy ubranie jest marki Nike, skorzystaj z equals
 
     public boolean isBrandEqualNike(Cloth cloth){
-        return true;
+        boolean isNike = cloth.getBrand().equals("Nike")?true:false;
+        return isNike;
     }
 
 
@@ -22,18 +24,21 @@ public class ClothUtils {
     //3.Napisz program, który stwierdzi czy ubranie posiada rozmiar S lub rozmiar M, skorzystaj z equals
 
     public boolean checkSize(Cloth cloth){
-        return true;
+        boolean whatSize = cloth.getSize().equals("S")||cloth.getSize().equals("M")?true:false;
+        return whatSize;
     }
 
     //4.Napisz program, który stwierdzi czy ubranie jest marki Adidas lub marki Nike, skorzystaj z equals
     public boolean checkBrand(Cloth cloth){
-        return true;
+        boolean whatBrand = cloth.getBrand().equals("Nike")||cloth.getBrand().equals("Adidas")?true:false;
+        return whatBrand;
     }
 
 
     //5.Napisz program, który stwierdzi ubranie jest marki Adidas i kosztuje mniej niz 200 zl, skorzystaj z equals
     public boolean checkBrandAndPrice(Cloth cloth){
-        return true;
+        boolean checkCloth = cloth.getBrand().equals("Adidas")&&cloth.getPrice()<200.0?true:false;
+        return checkCloth;
     }
 
 
